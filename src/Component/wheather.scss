@@ -1,0 +1,151 @@
+.App {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wheatherCard {
+    width: 40%;
+    min-width: 300px;
+    // padding: 30px 0;
+    height: auto;
+    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(0, 212, 255, 1) 100%);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .wheatherCardCont {
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        // align-items: center;
+        justify-content: center;
+
+
+        .locationSearch {
+            width: 90%;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+
+            input {
+                width: 80%;
+                height: 35px;
+                border: none;
+                border-radius: 10px;
+                outline: none;
+                padding-left: 10px;
+            }
+
+            div {
+                width: 37px;
+                height: 37px;
+                border-radius: 10px;
+                background-color: rgb(197, 192, 192);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+
+        .cloudy {
+            img {
+                width: 200px;
+                // margin-top: 20px;
+            }
+
+            // h2{
+            //     font-size: 70px;
+            // }
+            h2,
+            h3 {
+                margin-block-start: 0;
+                margin-block-end: 0;
+                color: white;
+            }
+
+            h3 {
+                font-size: 20px;
+                text-align: center;
+                margin-block-end: 3.83em;
+            }
+        }
+
+        .weatherInfo {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+
+            div {
+                display: flex;
+                justify-content: center;
+                column-gap: 10px;
+                align-items: center;
+
+                img {
+                    width: 25px;
+                    height: 20px;
+                }
+
+                div {
+                    display: flex;
+                    flex-direction: column;
+
+                    span {
+                        color: white;
+                        font-size: 12px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 460px) {
+    .wheatherCard {
+        padding: 30px 0;
+
+        .wheatherCardCont {
+
+            .cloudy {
+                h2 {
+                    font-size: 60px;
+                }
+
+                img {
+                    margin-top: 20px;
+                }
+
+                h3 {
+                    margin-block-end: 2.83em;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 460px) {
+    .wheatherCard {
+        width: 100%;
+        height: 100vh;
+        min-width: 300px;
+        border-radius: 0;
+
+        .wheatherCardCont {
+            height: 90%;
+        }
+
+        .cloudy {
+            h2 {
+                font-size: 70px;
+            }
+
+            img {
+                margin-top: 50px;
+            }
+        }
+    }
+}
